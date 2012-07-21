@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Scalastyle.github.com : Scalastyle XXX" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Scalastyle - Maven plugin</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/scalastyle">View on GitHub</a>
+
+          <h1 id="project_title">Scalastyle - Maven plugin</h1>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+	<h3 id='goals_overview'>Goals Overview</h3>
+
+<ul>
+<li><strong>scalastyle:check</strong> performs a violation check against the scalastyle config file to see if there are any violations. It counts the number of violations found and displays it on the console if verbose is enabled.</li>
+</ul>
+
+<h3 id='repository'>Repository</h3>
+
+<p>The repository for the Scalastyle maven plugin is: <a href='https://oss.sonatype.org/content/repositories/snapshots/org/scalastyle/scalastyle-maven-plugin/0.1.0-SNAPSHOT/'>Sonatype : https://oss.sonatype.org/content/repositories/snapshots/org/scalastyle/scalastyle-maven-plugin/0.1.0-SNAPSHOT</a></p>
+
+<h3 id='usage__scalacheck_violation_part_of_build_cycle'>Usage - scalacheck violation part of build cycle</h3>
+
+<p>To Configure the Scalastyle Plugin, you need to the add it in the &#60;build&#62; section of your pom.xml as shown in the sample below, and by default the build will fail if there are any violations of level error found. Default phase of execution is <code>verify</code>. The following is an example of a configuration which would be used in a pom:</p>
+<code><pre>
+    &lt;build&gt;
+        &lt;plugins&gt; 
+          ...
+          &lt;plugin&gt;
+            &lt;groupId&gt;org.scalastyle&lt;/groupId&gt;
+            &lt;artifactId&gt;scalastyle-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;0.1.0-SNAPSHOT&lt;/version&gt;
+            &lt;configuration&gt;
+              &lt;verbose&gt;false&lt;/verbose&gt;
+              &lt;failOnViolation&gt;true&lt;/failOnViolation&gt;
+              &lt;includeTestSourceDirectory&gt;true&lt;/includeTestSourceDirectory&gt;
+              &lt;failOnWarning&gt;false&lt;/failOnWarning&gt;
+              &lt;sourceDirectory&gt;${basedir}/src/main/scala&lt;/sourceDirectory&gt;
+              &lt;testSourceDirectory&gt;${basedir}/src/test/scala&lt;/testSourceDirectory&gt;
+              &lt;configLocation&gt;${basedir}/lib/scalastyle_config.xml&lt;/configLocation&gt;
+            &lt;/configuration&gt;
+            &lt;executions&gt;
+              &lt;execution&gt;
+                &lt;goals&gt;
+                  &lt;goal&gt;check&lt;/goal&gt;
+                &lt;/goals&gt;
+              &lt;/execution&gt;
+            &lt;/executions&gt;
+          &lt;/plugin&gt;
+            ...
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+</pre></code>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
