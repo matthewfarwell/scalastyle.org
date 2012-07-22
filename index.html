@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Scalastyle - Scala style checker" />
+    <meta http-equiv="refresh" content="60">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Scalastyle - Scala style checker</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/scalastyle">View on GitHub</a>
+
+          <h1 id="project_title">Scalastyle - Scala style checker</h1>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+	<p>Scalastyle examines your Scala code and indicates potential problems with it. If you have come across Checkstyle for Java, then you&#8217;ll have a good idea what scalastyle is. Except that it&#8217;s for Scala obviously.</p>
+
+<h3 id='how_do_i_use_scalastyle'>How do I use scalastyle?</h3>
+
+<p>There are several ways of using it:</p>
+
+<ul>
+<li><a href='maven.html'>Maven Plugin</a></li>
+
+<li><a href='eclipse-index.html'>Eclipse plugin (for 3.6 Helios)</a></li>
+
+<li><a href='https://github.com/scalastyle/scalastyle-batch'>Command line</a></li>
+</ul>
+
+<h4 id='download'>Download</h4>
+
+<p>To download Scalastyle, the jar is available from <a href='https://oss.sonatype.org/content/repositories/snapshots/org/scalastyle/scalastyle_2.9.1/0.1.0-SNAPSHOT/'>Sonatype</a>. These are the latest development snapshots. <br /> To scalastyle-batch (command line), this is also available from <a href='https://oss.sonatype.org/content/repositories/snapshots/org/scalastyle/scalastyle-batch_2.9.1/0.1.0-SNAPSHOT/'>Sonatype</a>. The latest version of scalastyle-batch always contains the latest version of Scalastyle. <br /> For the maven plugin, see <a href='maven.html'>Scalastyle Maven Plugin</a> <br /> <a href='eclipse-index.html'>Eclipse plugin (for 3.6 Helios)</a>: <br />Master development branch update site (cut and paste into Eclipse) <a href='http://www.scalastyle.org/downloads/helios/master/site'>http://www.scalastyle.org/downloads/helios/master/site</a></p>
+
+<h3 id='rules'>Rules</h3>
+
+<p>For a list of actual rules, see <a href='rules.html'>Implemented Rules</a>. For a list of (planned) rules, see the <a href='https://github.com/scalastyle/scalastyle/wiki'>Scalastyle WIKI</a>. If you want to add a rule, then please raise an <a href='https://github.com/scalastyle/scalastyle/issues'>Issue</a> (or even better a pull request)</p>
+
+<h3 id='questions_and_comments'>Questions and comments</h3>
+
+<p>If you have any questions, please see <a href='https://groups.google.com/forum/#!forum/scalastyle-users'>Scalastyle users Google groups</a></p>
+
+<h3 id='github_repositories'>Github repositories</h3>
+
+<ul>
+<li><a href='https://github.com/scalastyle/scalastyle-maven-plugin'>Maven plugin</a></li>
+
+<li><a href='https://github.com/scalastyle/scalastyle-plugin'>Eclipse plugin</a></li>
+
+<li><a href='https://github.com/scalastyle/scalastyle-batch'>Command line</a></li>
+</ul>
+
+<h3 id='running_scalastyle_from_the_command_line'>Running scalastyle from the command line</h3>
+
+<p>This process will be improved in time, but for now, you need to build scalastyle and then build scalastyle-batch. First install scalastyle in your local maven repo</p>
+
+<pre><code>$ git clone git://github.com/scalastyle/scalastyle.git
+$ cd scalastyle
+$ mvn install</code></pre>
+
+<p>Then get and build scalastyle-batch</p>
+
+<pre><code>$ git clone git://github.com/scalastyle/scalastyle-batch.git
+$ cd scalastyle-batch
+$ mvn package # or mvn install</code></pre>
+
+<p>This will create in scalastyle-batch/target a zip file which contains an executable jar along with the dependencies in lib/. Unzip this file somewhere, and run the jar as such:</p>
+
+<pre><code>$ java -jar scalastyle-batch_2.9.1.jar --config lib/scalastyle_config.xml src/main/scala</code></pre>
+
+<p>or similar. You can copy your initial configuration from lib/scalastyle_config.xml in the scalastyle project, and change it from there.</p>
+
+<h3 id='maven_repo'>Maven repo</h3>
+
+<p>Snapshots are available from the Sonatype nexus repository: https://oss.sonatype.org/content/repositories/snapshots/. To use, add something like the following to your settings.xml:</p>
+
+<pre><code>&lt;repository&gt;
+  &lt;id&gt;sonatype-nexus-snapshots&lt;/id&gt;
+  &lt;name&gt;Sonatype OSS&lt;/name&gt;
+  &lt;url&gt;https://oss.sonatype.org/content/repositories/snapshots/&lt;/url&gt;
+  &lt;layout&gt;default&lt;/layout&gt;
+  &lt;releases&gt;
+    &lt;enabled&gt;false&lt;/enabled&gt;
+    &lt;updatePolicy&gt;never&lt;/updatePolicy&gt;
+  &lt;/releases&gt;
+  &lt;snapshots&gt;
+    &lt;enabled&gt;true&lt;/enabled&gt;
+    &lt;updatePolicy&gt;never&lt;/updatePolicy&gt;
+  &lt;/snapshots&gt;
+&lt;/repository&gt;</code></pre>
+
+<p>There are only snapshots available at the minute.</p>
+
+<h3 id='testing'>Testing</h3>
+
+<p>To run the tests:</p>
+
+<pre><code>$ mvn test</code></pre>
+
+<h3 id='contributing'>Contributing</h3>
+
+<p>Want to contribute? Great! Look at the wiki for potential rules to implement, or do one of your own, and implement it.</p>
+
+<ol>
+<li>Read the <a href='https://github.com/scalastyle/scalastyle/wiki/developer-guide'>developer guide</a></li>
+
+<li>Fork the repo.</li>
+
+<li>Create a branch (<code>git checkout -b my_new_rule</code>)</li>
+
+<li>Commit your changes (<code>git commit -am &quot;Added NoFooAllowed&quot;</code>)</li>
+
+<li>Push to the branch (<code>git push origin my_new_rule</code>)</li>
+
+<li>Create an <a href='https://github.com/scalastyle/scalastyle/issues'>Issue</a> with a link to your branch</li>
+
+<li>Enjoy a coffee and wait</li>
+</ol>
+
+<h3 id='comment_filters'>Comment filters</h3>
+
+<p>If you wish to ignore a particular scalastyle rule, you can put a comment before and after the line, with the following syntax:</p>
+
+<pre><code>// scalastyle:off
+// scalastyle:on</code></pre>
+
+<p>You can also switch off checking for a particular rule by specifying the id of the rule to ignore:</p>
+
+<pre><code>// scalastyle:off magic.number
+var foobar = 134
+// scalastyle:on magic.number</code></pre>
+
+<h3 id='custom_messages'>Custom messages</h3>
+
+<p>Messages are defined within the scalastyle_messages.properties. If however, you wish to have a custom error message for a particular rule, then you can do so by defining a customMessage element in the configuration, such as:</p>
+
+<pre><code>&lt;check level=&quot;warning&quot; class=&quot;org.scalastyle.scalariform.MagicNumberChecker&quot; enabled=&quot;true&quot;&gt;
+ &lt;customMessage&gt;Please don&#39;t use magic numbers&lt;/customMessage&gt;
+&lt;/check&gt;</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+      </footer>
+    </div>
+  </body>
+</html>

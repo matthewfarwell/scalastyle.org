@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Scalastyle: Implemented Rules" />
+    <meta http-equiv="refresh" content="60">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Scalastyle: Implemented Rules</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/scalastyle">View on GitHub</a>
+
+          <h1 id="project_title">Scalastyle: Implemented Rules</h1>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+	<p>There are 34 rules which are currently implemented:</p>
+
+<h3 id='orgscalastylefilefilelengthchecker__check_the_number_of_lines_in_a_file'>org.scalastyle.file.FileLengthChecker - Check the number of lines in a file</h3>
+
+<ul>
+<li>id - file.size.limit</li>
+
+<li>description - Check the number of lines in a file</li>
+
+<li>class - org.scalastyle.file.FileLengthChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>maxFileLength</td>
+								<td>Maximum file length</td>
+								<td>integer</td>
+								<td>1500</td>
+								</tr></table>
+<h3 id='orgscalastylefilefilelinelengthchecker__check_the_number_of_characters_in_a_line'>org.scalastyle.file.FileLineLengthChecker - Check the number of characters in a line</h3>
+
+<ul>
+<li>id - line.size.limit</li>
+
+<li>description - Check the number of characters in a line</li>
+
+<li>class - org.scalastyle.file.FileLineLengthChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>maxLineLength</td>
+								<td>Maximum line length</td>
+								<td>integer</td>
+								<td>160</td>
+								</tr><tr><td>tabSize</td>
+								<td>Tab size</td>
+								<td>integer</td>
+								<td>4</td>
+								</tr></table>
+<h3 id='orgscalastylefilefiletabchecker__check_that_there_are_no_tabs_in_a_file'>org.scalastyle.file.FileTabChecker - Check that there are no tabs in a file</h3>
+
+<ul>
+<li>id - line.contains.tab</li>
+
+<li>description - Check that there are no tabs in a file</li>
+
+<li>class - org.scalastyle.file.FileTabChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylefileheadermatcheschecker__check_the_first_lines_of_each_file_matches_the_text'>org.scalastyle.file.HeaderMatchesChecker - Check the first lines of each file matches the text</h3>
+
+<ul>
+<li>id - header.matches</li>
+
+<li>description - Check the first lines of each file matches the text</li>
+
+<li>class - org.scalastyle.file.HeaderMatchesChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>header</td>
+								<td>Header</td>
+								<td>string</td>
+								<td />
+								</tr></table>
+<h3 id='orgscalastylefilenewlineateofchecker__checks_that_a_file_ends_with_a_newline_character'>org.scalastyle.file.NewLineAtEofChecker - Checks that a file ends with a newline character</h3>
+
+<ul>
+<li>id - newline.at.eof</li>
+
+<li>description - Checks that a file ends with a newline character</li>
+
+<li>class - org.scalastyle.file.NewLineAtEofChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylefilenonewlineateofchecker__checks_that_a_file_does_not_end_with_a_newline_character'>org.scalastyle.file.NoNewLineAtEofChecker - Checks that a file does not end with a newline character</h3>
+
+<ul>
+<li>id - no.newline.at.eof</li>
+
+<li>description - Checks that a file does not end with a newline character</li>
+
+<li>class - org.scalastyle.file.NoNewLineAtEofChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylefileregexchecker__checks_that_a_regular_expression_cannot_be_matched_if_found_reports_this'>org.scalastyle.file.RegexChecker - Checks that a regular expression cannot be matched, if found reports this</h3>
+
+<ul>
+<li>id - regex</li>
+
+<li>description - Checks that a regular expression cannot be matched, if found reports this</li>
+
+<li>class - org.scalastyle.file.RegexChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>regex</td>
+								<td>Regular expression</td>
+								<td>string</td>
+								<td />
+								</tr></table>
+<h3 id='orgscalastylefilewhitespaceendoflinechecker__check_that_there_is_no_trailing_whitespace_at_the_end_of_lines'>org.scalastyle.file.WhitespaceEndOfLineChecker - Check that there is no trailing whitespace at the end of lines</h3>
+
+<ul>
+<li>id - whitespace.end.of.line</li>
+
+<li>description - Check that there is no trailing whitespace at the end of lines</li>
+
+<li>class - org.scalastyle.file.WhitespaceEndOfLineChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylescalariformclassnameschecker__check_that_class_names_match_a_regular_expression'>org.scalastyle.scalariform.ClassNamesChecker - Check that class names match a regular expression</h3>
+
+<ul>
+<li>id - class.name</li>
+
+<li>description - Check that class names match a regular expression</li>
+
+<li>class - org.scalastyle.scalariform.ClassNamesChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>regex</td>
+								<td>Regular expression</td>
+								<td>string</td>
+								<td>^[A-Z][A-Za-z]*$</td>
+								</tr></table>
+<h3 id='orgscalastylescalariformcovariantequalschecker__check_that_classes_and_objects_do_not_define_equals_without_overriding_equalsjavalangobject'>org.scalastyle.scalariform.CovariantEqualsChecker - Check that classes and objects do not define equals without overriding equals(java.lang.Object).</h3>
+
+<ul>
+<li>id - covariant.equals</li>
+
+<li>description - Check that classes and objects do not define equals without overriding equals(java.lang.Object).</li>
+
+<li>class - org.scalastyle.scalariform.CovariantEqualsChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylescalariformcyclomaticcomplexitychecker__checks_that_the_cyclomatic_complexity_of_a_method_does_exceed_a_value'>org.scalastyle.scalariform.CyclomaticComplexityChecker - Checks that the cyclomatic complexity of a method does exceed a value</h3>
+
+<ul>
+<li>id - cyclomatic.complexity</li>
+
+<li>description - Checks that the cyclomatic complexity of a method does exceed a value</li>
+
+<li>class - org.scalastyle.scalariform.CyclomaticComplexityChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>maximum</td>
+								<td>Maximum</td>
+								<td>integer</td>
+								<td>10</td>
+								</tr></table>
+<h3 id='orgscalastylescalariformequalshashcodechecker__check_that_if_a_class_implements_either_equals_or_hashcode_it_should_implement_the_other'>org.scalastyle.scalariform.EqualsHashCodeChecker - Check that if a class implements either equals or hashCode, it should implement the other</h3>
+
+<ul>
+<li>id - equals.hash.code</li>
+
+<li>description - Check that if a class implements either equals or hashCode, it should implement the other</li>
+
+<li>class - org.scalastyle.scalariform.EqualsHashCodeChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylescalariformifbracechecker__checks_that_if_statement_have_braces'>org.scalastyle.scalariform.IfBraceChecker - Checks that if statement have braces</h3>
+
+<ul>
+<li>id - if.brace</li>
+
+<li>description - Checks that if statement have braces</li>
+
+<li>class - org.scalastyle.scalariform.IfBraceChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>singleLineAllowed</td>
+								<td>Single Line Allowed</td>
+								<td>boolean</td>
+								<td>true</td>
+								</tr><tr><td>doubleLineAllowed</td>
+								<td>Double Line Allowed</td>
+								<td>boolean</td>
+								<td>false</td>
+								</tr></table>
+<h3 id='orgscalastylescalariformillegalimportschecker__check_that_a_class_does_not_import_certain_classes'>org.scalastyle.scalariform.IllegalImportsChecker - Check that a class does not import certain classes</h3>
+
+<ul>
+<li>id - illegal.imports</li>
+
+<li>description - Check that a class does not import certain classes</li>
+
+<li>class - org.scalastyle.scalariform.IllegalImportsChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>illegalImports</td>
+								<td>Illegal Imports</td>
+								<td>string</td>
+								<td>sun._,java.awt._</td>
+								</tr></table>
+<h3 id='orgscalastylescalariformmagicnumberchecker__checks_for_use_of_magic_numbers'>org.scalastyle.scalariform.MagicNumberChecker - Checks for use of magic numbers</h3>
+
+<ul>
+<li>id - magic.number</li>
+
+<li>description - Checks for use of magic numbers</li>
+
+<li>class - org.scalastyle.scalariform.MagicNumberChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>ignore</td>
+								<td>Ignore</td>
+								<td>string</td>
+								<td>-1,0,1,2</td>
+								</tr></table>
+<h3 id='orgscalastylescalariformmethodlengthchecker__checks_that_methods_do_not_exceed_a_maximum_length'>org.scalastyle.scalariform.MethodLengthChecker - Checks that methods do not exceed a maximum length</h3>
+
+<ul>
+<li>id - method.length</li>
+
+<li>description - Checks that methods do not exceed a maximum length</li>
+
+<li>class - org.scalastyle.scalariform.MethodLengthChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>maxLength</td>
+								<td>Maximum length</td>
+								<td>integer</td>
+								<td>50</td>
+								</tr></table>
+<h3 id='orgscalastylescalariformmethodnameschecker__check_that_method_names_match_a_regular_expression'>org.scalastyle.scalariform.MethodNamesChecker - Check that method names match a regular expression</h3>
+
+<ul>
+<li>id - method.name</li>
+
+<li>description - Check that method names match a regular expression</li>
+
+<li>class - org.scalastyle.scalariform.MethodNamesChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>regex</td>
+								<td>Regular expression</td>
+								<td>string</td>
+								<td>^[a-z][A-Za-z0-9]*$</td>
+								</tr></table>
+<h3 id='orgscalastylescalariformnoclonechecker__check_that_classes_and_objects_do_not_define_the_clone_method'>org.scalastyle.scalariform.NoCloneChecker - Check that classes and objects do not define the clone() method</h3>
+
+<ul>
+<li>id - no.clone</li>
+
+<li>description - Check that classes and objects do not define the clone() method</li>
+
+<li>class - org.scalastyle.scalariform.NoCloneChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylescalariformnofinalizechecker__check_that_classes_and_objects_do_not_define_the_finalize_method'>org.scalastyle.scalariform.NoFinalizeChecker - Check that classes and objects do not define the finalize() method</h3>
+
+<ul>
+<li>id - no.finalize</li>
+
+<li>description - Check that classes and objects do not define the finalize() method</li>
+
+<li>class - org.scalastyle.scalariform.NoFinalizeChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylescalariformnowhitespaceafterleftbracketchecker__no_whitespace_after_left_bracket_'>org.scalastyle.scalariform.NoWhitespaceAfterLeftBracketChecker - No whitespace after left bracket &#8216;[&#8217;</h3>
+
+<ul>
+<li>id - no.whitespace.after.left.bracket</li>
+
+<li>description - No whitespace after left bracket &#8216;[&#8217;</li>
+
+<li>class - org.scalastyle.scalariform.NoWhitespaceAfterLeftBracketChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylescalariformnowhitespacebeforeleftbracketchecker__no_whitespace_before_left_bracket_'>org.scalastyle.scalariform.NoWhitespaceBeforeLeftBracketChecker - No whitespace before left bracket &#8216;[&#8217;</h3>
+
+<ul>
+<li>id - no.whitespace.before.left.bracket</li>
+
+<li>description - No whitespace before left bracket &#8216;[&#8217;</li>
+
+<li>class - org.scalastyle.scalariform.NoWhitespaceBeforeLeftBracketChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylescalariformnullchecker__check_that_null_is_not_used'>org.scalastyle.scalariform.NullChecker - Check that null is not used</h3>
+
+<ul>
+<li>id - null</li>
+
+<li>description - Check that null is not used</li>
+
+<li>class - org.scalastyle.scalariform.NullChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylescalariformnumberofmethodsintypechecker__check_that_a_class__trait__object_does_not_have_too_many_methods'>org.scalastyle.scalariform.NumberOfMethodsInTypeChecker - Check that a class / trait / object does not have too many methods</h3>
+
+<ul>
+<li>id - number.of.methods</li>
+
+<li>description - Check that a class / trait / object does not have too many methods</li>
+
+<li>class - org.scalastyle.scalariform.NumberOfMethodsInTypeChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>maxMethods</td>
+								<td>Maximum methods</td>
+								<td>integer</td>
+								<td>30</td>
+								</tr></table>
+<h3 id='orgscalastylescalariformnumberoftypeschecker__checks_that_there_are_not_too_many_types_declared_in_a_file'>org.scalastyle.scalariform.NumberOfTypesChecker - Checks that there are not too many types declared in a file</h3>
+
+<ul>
+<li>id - number.of.types</li>
+
+<li>description - Checks that there are not too many types declared in a file</li>
+
+<li>class - org.scalastyle.scalariform.NumberOfTypesChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>maxTypes</td>
+								<td>Maximum Number</td>
+								<td>integer</td>
+								<td>20</td>
+								</tr></table>
+<h3 id='orgscalastylescalariformobjectnameschecker__check_that_object_names_match_a_regular_expression'>org.scalastyle.scalariform.ObjectNamesChecker - Check that object names match a regular expression</h3>
+
+<ul>
+<li>id - object.name</li>
+
+<li>description - Check that object names match a regular expression</li>
+
+<li>class - org.scalastyle.scalariform.ObjectNamesChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>regex</td>
+								<td>Regular expression</td>
+								<td>string</td>
+								<td>^[A-Z][A-Za-z]*$</td>
+								</tr></table>
+<h3 id='orgscalastylescalariformpackageobjectnameschecker__check_that_package_object_names_match_a_regular_expression'>org.scalastyle.scalariform.PackageObjectNamesChecker - Check that package object names match a regular expression</h3>
+
+<ul>
+<li>id - package.object.name</li>
+
+<li>description - Check that package object names match a regular expression</li>
+
+<li>class - org.scalastyle.scalariform.PackageObjectNamesChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>regex</td>
+								<td>Regular expression</td>
+								<td>string</td>
+								<td>^[a-z][A-Za-z]*$</td>
+								</tr></table>
+<h3 id='orgscalastylescalariformparameternumberchecker__maximum_number_of_parameters_for_a_method'>org.scalastyle.scalariform.ParameterNumberChecker - Maximum number of parameters for a method</h3>
+
+<ul>
+<li>id - parameter.number</li>
+
+<li>description - Maximum number of parameters for a method</li>
+
+<li>class - org.scalastyle.scalariform.ParameterNumberChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>maxParameters</td>
+								<td>Maximum Number</td>
+								<td>integer</td>
+								<td>8</td>
+								</tr></table>
+<h3 id='orgscalastylescalariformpublicmethodshavetypechecker__check_that_a_method_has_an_explicit_return_type_it_is_not_inferred'>org.scalastyle.scalariform.PublicMethodsHaveTypeChecker - Check that a method has an explicit return type, it is not inferred</h3>
+
+<ul>
+<li>id - public.methods.have.type</li>
+
+<li>description - Check that a method has an explicit return type, it is not inferred</li>
+
+<li>class - org.scalastyle.scalariform.PublicMethodsHaveTypeChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylescalariformreturnchecker__check_that_return_is_not_used'>org.scalastyle.scalariform.ReturnChecker - Check that return is not used</h3>
+
+<ul>
+<li>id - return</li>
+
+<li>description - Check that return is not used</li>
+
+<li>class - org.scalastyle.scalariform.ReturnChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylescalariformsimplifybooleanexpressionchecker__boolean_expression_can_be_simplified'>org.scalastyle.scalariform.SimplifyBooleanExpressionChecker - Boolean expression can be simplified</h3>
+
+<ul>
+<li>id - simplify.boolean.expression</li>
+
+<li>description - Boolean expression can be simplified</li>
+
+<li>class - org.scalastyle.scalariform.SimplifyBooleanExpressionChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylescalariformspacesafterpluschecker__check_that_the_plus_sign_is_followed_by_a_space'>org.scalastyle.scalariform.SpacesAfterPlusChecker - Check that the plus sign is followed by a space</h3>
+
+<ul>
+<li>id - spaces.after.plus</li>
+
+<li>description - Check that the plus sign is followed by a space</li>
+
+<li>class - org.scalastyle.scalariform.SpacesAfterPlusChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylescalariformspacesbeforepluschecker__check_that_the_plus_sign_is_preceded_by_a_space'>org.scalastyle.scalariform.SpacesBeforePlusChecker - Check that the plus sign is preceded by a space</h3>
+
+<ul>
+<li>id - spaces.before.plus</li>
+
+<li>description - Check that the plus sign is preceded by a space</li>
+
+<li>class - org.scalastyle.scalariform.SpacesBeforePlusChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylescalariformstructuraltypechecker__check_that_structural_types_are_not_used'>org.scalastyle.scalariform.StructuralTypeChecker - Check that structural types are not used.</h3>
+
+<ul>
+<li>id - structural.type</li>
+
+<li>description - Check that structural types are not used.</li>
+
+<li>class - org.scalastyle.scalariform.StructuralTypeChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='orgscalastylescalariformuppercaselchecker__checks_that_if_a_long_literal_is_used_then_an_uppercase_l_is_used'>org.scalastyle.scalariform.UppercaseLChecker - Checks that if a long literal is used, then an uppercase L is used</h3>
+
+<ul>
+<li>id - uppercase.l</li>
+
+<li>description - Checks that if a long literal is used, then an uppercase L is used</li>
+
+<li>class - org.scalastyle.scalariform.UppercaseLChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+      </footer>
+    </div>
+  </body>
+</html>
