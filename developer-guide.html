@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Scalastyle - Developer guide" />
+    <meta http-equiv="refresh" content="60">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Scalastyle - Developer guide</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/scalastyle">View on GitHub</a>
+
+          <h1 id="project_title">Scalastyle - Developer guide</h1>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+	<h3 id='prerequisites'>Pre-requisites</h3>
+
+<ul>
+<li><a href='http://gitscm.com/'>git</a></li>
+
+<li><a href='http://maven.apache.org/'>Maven 3</a></li>
+</ul>
+
+<h3 id='source_control_git__github__building'>Source control (git &amp; github) &amp; building:</h3>
+
+<p>First, fork the repo on github. On <a href='https://github.com/scalastyle/scalastyle'>https://github.com/scalastyle/scalastyle</a>, click on the button &#8216;Fork&#8217; and wait a couple of seconds. This will create your own fork of the git repo. You should always work with this repo, and create Pull Requests to the main scalastyle repo.</p>
+
+<p>To clone the git repo, and check out the master branch:</p>
+
+<pre><code>$ git clone git@github.com:&lt;yourgithubnamehere&gt;/scalastyle.git
+$ cd scalastyle</code></pre>
+
+<p>Scalastyle uses <a href='http://maven.apache.org/'>Maven 2</a> to build. To create the distribution, run</p>
+
+<pre><code>$ mvn package</code></pre>
+
+<p>This will compile the source code and run the tests.</p>
+
+<h3 id='getting_started_with_development'>Getting started with development</h3>
+
+<p>When you&#8217;re developing, it&#8217;s pretty much always a good idea to create a local branch and commit to that.</p>
+
+<pre><code>$ git branch my-great-new-checker
+$ git checkout my-great-new-checker
+$ ...
+$ create beautiful code
+$ git commit -m &quot;checker to check that my code is great&quot;</code></pre>
+
+<p>Then, when you&#8217;ve finished, go onto github, and create a pull request so that the code can be reviewed and pulled into the scalastyle repo.</p>
+
+<h3 id='submitting_pull_requests'>Submitting pull requests</h3>
+
+<p>Pull requests are always welcome. To create a pull request, go to your repo, and click on <code>Pull Request</code>. Enter the commit details, and submit it. This will create an issue in github for scalastyle, which will notify the maintainers. The following things make it more likely that we will accept your pull request:</p>
+
+<ul>
+<li>We do Test Driven Development. Please create tests for your code.</li>
+
+<li>The pull request is a single commit. This means that there will only be one log message for the change. This makes it a lot easier for everyone. See the section on squashing.</li>
+
+<li>The code has the correct style. To check this, you can use Scalastyle :-). Seriously, use the scalastyle_dev_config.xml to check your code. When we have a maven plugin, this will be enforced. If anyone is interested in writing a maven plugin, please feel free.</li>
+</ul>
+
+<h3 id='what_to_work_on'>What to work on</h3>
+
+<p>Please see the set of <a href='https://github.com/scalastyle/scalastyle/issues'>issues</a> or the <a href='https://github.com/scalastyle/scalastyle/wiki'>Scalastyle WIKI</a> for a list of potential rules.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+      </footer>
+    </div>
+  </body>
+</html>
