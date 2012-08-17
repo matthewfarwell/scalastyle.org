@@ -30,6 +30,8 @@
 
 <h3 id='how_do_i_use_scalastyle'>How do I use scalastyle?</h3>
 
+<p>The latest stable version of Scalastyle is 0.1.0 for Scala 2.9.1. See the <a href='release-notes.html'>Release Notes</a></p>
+
 <p>There are several ways of using it:</p>
 
 <ul>
@@ -42,11 +44,15 @@
 
 <h4 id='download'>Download</h4>
 
-<p>To download Scalastyle, the jar is available from <a href='https://oss.sonatype.org/content/repositories/snapshots/org/scalastyle/scalastyle_2.9.1/0.1.0-SNAPSHOT/'>Sonatype</a>. These are the latest development snapshots. <br /> To scalastyle-batch (command line), this is also available from <a href='https://oss.sonatype.org/content/repositories/snapshots/org/scalastyle/scalastyle-batch_2.9.1/0.1.0-SNAPSHOT/'>Sonatype</a>. The latest version of scalastyle-batch always contains the latest version of Scalastyle. <br /> For the maven plugin, see <a href='maven.html'>Scalastyle Maven Plugin</a> <br /> <a href='eclipse-index.html'>Eclipse plugin (for 3.6 Helios)</a>: <br />Master development branch update site (cut and paste into Eclipse) <a href='http://www.scalastyle.org/downloads/helios/master/site'>http://www.scalastyle.org/downloads/helios/master/site</a></p>
+<p>To download Scalastyle, the jar is available from <a href='https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.9.1'>Sonatype</a>. <br /> To scalastyle-batch (command line), this is also available from <a href='https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle-batch_2.9.1/'>Sonatype</a>. The latest version of scalastyle-batch always contains the latest version of Scalastyle. <br /> For the maven plugin, see <a href='maven.html'>Scalastyle Maven Plugin</a> <br /> <a href='eclipse-index.html'>Eclipse plugin (for 3.6 Helios)</a>: <br />Stable update site (cut and paste into Eclipse) <a href='http://www.scalastyle.org/downloads/helios/2.9.1-0.1.0/site'>http://www.scalastyle.org/downloads/helios/2.9.1-0.1.0/site</a></p>
+
+<p>The latest development snapshots are available from <a href='https://oss.sonatype.org/content/repositories/snapshots/org/scalastyle/'>Sonatype snapshots</a></p>
 
 <h3 id='rules'>Rules</h3>
 
-<p>For a list of actual rules, see <a href='rules.html'>Implemented Rules</a>. For a list of (planned) rules, see the <a href='https://github.com/scalastyle/scalastyle/wiki'>Scalastyle WIKI</a>. If you want to add a rule, then please raise an <a href='https://github.com/scalastyle/scalastyle/issues'>Issue</a> (or even better a pull request)</p>
+<p>For a list of actual rules, see <a href='rules-0.1.0.html'>Implemented Rules</a>. For a list of (planned) rules, see the <a href='https://github.com/scalastyle/scalastyle/wiki'>Scalastyle WIKI</a>. If you want to add a rule, then please raise an <a href='https://github.com/scalastyle/scalastyle/issues'>Issue</a> (or even better a pull request)</p>
+
+<p>For a list of rules in the latest development version, see <a href='rules-dev.html'>Development Implemented Rules</a>.</p>
 
 <h3 id='questions_and_comments'>Questions and comments</h3>
 
@@ -89,14 +95,14 @@ $ mvn package # or mvn install</code></pre>
 <pre><code>&lt;repository&gt;
   &lt;id&gt;sonatype-nexus-snapshots&lt;/id&gt;
   &lt;name&gt;Sonatype OSS&lt;/name&gt;
-  &lt;url&gt;https://oss.sonatype.org/content/repositories/snapshots/&lt;/url&gt;
+  &lt;url&gt;https://oss.sonatype.org/content/repositories/releases/&lt;/url&gt;
   &lt;layout&gt;default&lt;/layout&gt;
   &lt;releases&gt;
-    &lt;enabled&gt;false&lt;/enabled&gt;
+    &lt;enabled&gt;true&lt;/enabled&gt;
     &lt;updatePolicy&gt;never&lt;/updatePolicy&gt;
   &lt;/releases&gt;
   &lt;snapshots&gt;
-    &lt;enabled&gt;true&lt;/enabled&gt;
+    &lt;enabled&gt;false&lt;/enabled&gt;
     &lt;updatePolicy&gt;never&lt;/updatePolicy&gt;
   &lt;/snapshots&gt;
 &lt;/repository&gt;</code></pre>
