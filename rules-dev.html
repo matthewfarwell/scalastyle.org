@@ -25,7 +25,7 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-	<p>There are 37 rules which are currently implemented:</p>
+	<p>There are 40 rules which are currently implemented:</p>
 
 <h3 id='orgscalastylefilefilelengthchecker__check_the_number_of_lines_in_a_file'>org.scalastyle.file.FileLengthChecker - Check the number of lines in a file</h3>
 
@@ -270,6 +270,28 @@
   &lt;parameter name=&quot;maximum&quot;&gt;10&lt;/parameter&gt;
  &lt;/parameters&gt;
 &lt;/check&gt;</pre>
+<h3 id='orgscalastylescalariformdeprecatedjavachecker__checks_that_java_deprecated_is_not_used_scala_deprecated_should_be_used_instead'>org.scalastyle.scalariform.DeprecatedJavaChecker - Checks that Java @Deprecated is not used, Scala @deprecated should be used instead</h3>
+
+<ul>
+<li>id - deprecated.java</li>
+
+<li>description - Checks that Java @Deprecated is not used, Scala @deprecated should be used instead</li>
+
+<li>class - org.scalastyle.scalariform.DeprecatedJavaChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='justification'>Justification</h4>
+
+<p>You should be using the Scala @deprecated instead.</p>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='example_configuration'>Example configuration</h3>
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.DeprecatedJavaChecker&quot; level=&quot;warning&quot;&gt;&lt;/check&gt;</pre>
 <h3 id='orgscalastylescalariformequalshashcodechecker__check_that_if_a_class_implements_either_equals_or_hashcode_it_should_implement_the_other'>org.scalastyle.scalariform.EqualsHashCodeChecker - Check that if a class implements either equals or hashCode, it should implement the other</h3>
 
 <ul>
@@ -665,6 +687,28 @@
 
 <h3 id='example_configuration'>Example configuration</h3>
 <pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.PublicMethodsHaveTypeChecker&quot; level=&quot;warning&quot;&gt;&lt;/check&gt;</pre>
+<h3 id='orgscalastylescalariformredundantifchecker__checks_that_if_expressions_are_not_redundant_ie_easily_replaced_by_a_variant_of_the_condition'>org.scalastyle.scalariform.RedundantIfChecker - Checks that if expressions are not redundant, i.e. easily replaced by a variant of the condition</h3>
+
+<ul>
+<li>id - if.redundant</li>
+
+<li>description - Checks that if expressions are not redundant, i.e. easily replaced by a variant of the condition</li>
+
+<li>class - org.scalastyle.scalariform.RedundantIfChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='justification'>Justification</h4>
+
+<p>If expressions with boolean constants in both branches can be eliminated without affecting readability. Prefer simply <code>cond</code> to <code>if (cond) true else false</code> and <code>!cond</code> to <code>if (cond) false else true</code>.</p>
+
+<h4 id='parameters'>Parameters</h4>
+
+<p>No parameters</p>
+
+<h3 id='example_configuration'>Example configuration</h3>
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.RedundantIfChecker&quot; level=&quot;warning&quot;&gt;&lt;/check&gt;</pre>
 <h3 id='orgscalastylescalariformreturnchecker__check_that_return_is_not_used'>org.scalastyle.scalariform.ReturnChecker - Check that return is not used</h3>
 
 <ul>
@@ -755,6 +799,31 @@
 
 <h3 id='example_configuration'>Example configuration</h3>
 <pre>TBD</pre>
+<h3 id='orgscalastylescalariformtokenchecker__checks_that_a_regular_expression_cannot_be_matched_in_a_token_if_found_reports_this'>org.scalastyle.scalariform.TokenChecker - Checks that a regular expression cannot be matched in a token, if found reports this</h3>
+
+<ul>
+<li>id - token</li>
+
+<li>description - Checks that a regular expression cannot be matched in a token, if found reports this</li>
+
+<li>class - org.scalastyle.scalariform.TokenChecker</li>
+
+<li>default level - WarningLevel</li>
+</ul>
+
+<h4 id='parameters'>Parameters</h4>
+<table width='80%'><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>regex</td>
+								<td>Regular expression</td>
+								<td>string</td>
+								<td>^$</td>
+								</tr></table>
+<h3 id='example_configuration'>Example configuration</h3>
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.TokenChecker&quot; level=&quot;warning&quot;&gt;
+ &lt;parameters&gt;
+  &lt;parameter name=&quot;regex&quot;&gt;^[ai]sInstanceOf$&lt;/parameter&gt;
+ &lt;/parameters&gt;
+ &lt;customMessage&gt;Avoid casting.&lt;/customMessage&gt;
+&lt;/check&gt;</pre>
 <h3 id='orgscalastylescalariformuppercaselchecker__checks_that_if_a_long_literal_is_used_then_an_uppercase_l_is_used'>org.scalastyle.scalariform.UppercaseLChecker - Checks that if a long literal is used, then an uppercase L is used</h3>
 
 <ul>
